@@ -7,7 +7,10 @@ class App extends Component {
 
   componentDidMount () {
     if (process.env.TARO_ENV === 'weapp') {
-      Taro.cloud.init()
+      Taro.cloud.init({
+        env: 'record-6g7ed0bb2d46f443',
+        traceUser: true,
+      })
     }
   }
 
